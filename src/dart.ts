@@ -60,8 +60,8 @@ export async function analyze(
   customLint: boolean,
 ): Promise<AnalyzerResult> {
   const analyzeOutput = await exec.getExecOutput(
-    'dart',
-    ['analyze', '--format=json', '.'],
+    'fvm',
+    ['dart', 'analyze', '--format=json', '.'],
     {
       cwd,
       silent: true,
